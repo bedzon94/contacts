@@ -29,7 +29,7 @@ This is a simple Python program that allows you to manage a contacts list. The p
 
 3. Run the program by executing ``` python project.py ```
 
-4. Choose from the menu options (1/2/3/4/5) to perform various operations.
+4. Choose from the menu options (1/2/3/4) to perform various operations.
 
 
 
