@@ -23,11 +23,11 @@ This is a simple Python program that allows you to manage a contacts list. The p
 
 ## Usage
 
-1. Clone the repository: ''' git clone https://github.com/bedzon94/contacts '''
+1. Clone the repository: ``` git clone https://github.com/bedzon94/contacts ```
 
-2. Install the required dependencies using pip: ''' pip install -r requirements.txt '''
+2. Install the required dependencies using pip: ``` pip install -r requirements.txt ```
 
-3. Run the program by executing ''' python project.py '''
+3. Run the program by executing ``` python project.py ```
 
 4. Choose from the menu options (1/2/3/4/5) to perform various operations.
 
