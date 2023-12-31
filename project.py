@@ -14,39 +14,30 @@ def main():
             print("4. Delete a contact")
             print("5. Quit")
 
-            choice = input("Enter your choice (1/2/3/4/5): ")
-            print()
+            choice = input("Enter your choice (1/2/3/4/5): \n")
             if choice == '1':
-                add_contact()
-                print()
+                print(add_contact())
             elif choice == '2':
-                list_contacts()
-                print()
+                print(list_contacts())
             elif choice == '3':
                 search_contact()
-                print()
             elif choice == '4':
                 delete_contact()
-                print()
             elif choice == '5':
-                goodbye = pyfiglet.figlet_format("Goodbye!", font="big")
+                goodbye = pyfiglet.figlet_format("Goodbye!\n", font="big")
                 print(goodbye)
-                print()
                 break
             else:
-                print("Invalid choice. Please enter a valid option (1/2/3/4/5).")
-                print()
+                print("Invalid choice. Please enter a valid option (1/2/3/4/5).\n")
         except EOFError:
-            print()
-            sys.exit("Exiting the program...")
+            sys.exit("\nExiting the program...")
         except KeyboardInterrupt:
-            print()
-            sys.exit("Exiting the program...")
+            sys.exit("\nExiting the program...")
 
 #Dictionary to store contacts with names as keys and details as values
 contacts = {}
 
-# Function to add a contact
+#Function to add a contact
 def add_contact():
     name = input("Enter the contact's name: ")
     phone = input("Enter the contact's phone number: ")
@@ -57,36 +48,35 @@ def add_contact():
         "Email": email
     }
     print()
-    print(f"{name} has been added to your contacts!")
+    return f"{name} has been added to your contacts!"
 
 #Function to display all contacts
 def list_contacts():
-    print()
-    print("Contacts List:")
-    for name, details in contacts.items():
-        print(f"Name: {name}")
-        print(f"Phone: {details['Phone']}")
-        print(f"Email: {details['Email']}")
+    result = "\nContacts List: \n"
+    for key, value in contacts.items():
+        result += f"\n{key.capitalize()}: {value}"
+    return result
+
 
 #Function to search for a contact
 def search_contact():
-    name = input("Enter the name to search: ")
+    name = input("Enter the name to search: \n")
     if name in contacts:
         details = contacts[name]
         print(f"Name: {name}")
         print(f"Phone: {details['Phone']}")
-        print(f"Email: {details['Email']}")
+        print(f"Email: {details['Email']}\n")
     else:
-        print(f"{name} not found in your contacts.")
+        print(f"{name} not found in your contacts.\n")
 
 #Function to delete a contact
 def delete_contact():
-    name = input("Enter the name to delete: ")
+    name = input("Enter the name to delete: \n")
     if name in contacts:
         del contacts[name]
-        print(f"{name} has been deleted from your contacts.")
+        print(f"{name} has been deleted from your contacts.\n")
     else:
-        print(f"{name} not found in your contacts.")
+        print(f"{name} not found in your contacts.\n")
 
 
 
